@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">StageOneHngTask</string>
+    <string name="title_activity_web_page">WebPage</string>
+    <string name="title_activity_web_view">WebViewActivity</string>
+</resources>
