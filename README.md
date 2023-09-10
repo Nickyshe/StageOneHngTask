@@ -1,7 +1,7 @@
 # HNG-MOBILE-TASK1
 The first task in HNG ZURI INTERNSHIP for Mobile Track. 
 
-The language used Kotlin and Compose for UI
+The language used: Kotlin and Compose for UI
 
 Appetize Link for the Project [Appetize](https://appetize.io/app/rpxpyjusnaaij6nac66th2dgei)
 
