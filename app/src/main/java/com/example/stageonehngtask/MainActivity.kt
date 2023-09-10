@@ -20,6 +20,7 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material3.Button
+import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
@@ -37,6 +38,7 @@ import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
+import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.compose.ui.viewinterop.AndroidView
@@ -55,10 +57,11 @@ class MainActivity : ComponentActivity() {
                 modifier = Modifier
 
                     .fillMaxSize()
-                    .padding(16.dp),
+                    .padding(12.dp),
                 horizontalAlignment = Alignment.CenterHorizontally,
+                verticalArrangement = Arrangement.Center
 
-                ) {
+            ) {
 
                 Image(
                     painter = painterResource(id = R.drawable.slackphoto),
@@ -71,30 +74,41 @@ class MainActivity : ComponentActivity() {
                         .padding(8.dp)
                         .clip(CircleShape)
                 )
-                Spacer(modifier = Modifier.height(20.dp))
+                Spacer(modifier = Modifier.height(30.dp))
 
-                Text(text = "slack username")
-                Spacer(modifier = Modifier.height(40.dp))
+                Text(
+                    text = "Slack Username",
+                    fontSize = 18.sp
+                )
+                Spacer(modifier = Modifier.height(10.dp))
 
                 Text(
                     text = "Etugbo Judith Ogheneujiro",
-                    fontSize = 20.sp,
+                    fontSize = 25.sp,
                     fontWeight = FontWeight.Bold,
                     color = Color.Black,
+                    maxLines = 1,
                     textAlign = TextAlign.Center
+                   // overflow = TextOverflow.Ellipsis
+
                 )
 
-                Spacer(modifier = Modifier.height(40.dp))
+                Spacer(modifier = Modifier.height(10.dp))
                 Button(
                     onClick = {
                         openWebViewActivity() // Handle button click to open WebView
                         // openWebView(url = "https://github.com/Nickyshe")
                     },
+                    colors = ButtonDefaults.buttonColors(Color.Black),
                     modifier = Modifier
+
                         .fillMaxWidth()
                         .padding(20.dp)
                 ) {
-                    Text(text = "OpenGithub")
+                    Text(
+                        text = "Open Github",
+                        fontSize = 16.sp
+                    )
                 }
 
             }
